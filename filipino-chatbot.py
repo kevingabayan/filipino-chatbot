@@ -1,7 +1,7 @@
 from chatterbot import ChatBot
 from chatterbot.trainers import ChatterBotCorpusTrainer
 
-chatbot = ChatBot('KaiSa',
+chatbot = ChatBot('Kaisa',
                   storage_adapter='chatterbot.storage.SQLStorageAdapter',
                   database_uri='sqlite:///database.sqlite3')
 
@@ -11,7 +11,9 @@ trainer.train("./filipino-games.yml")
 
 while True:
     try:
+        print("User: ")
         bot_input = chatbot.get_response(input())
+        print("Bot: ")
         print(bot_input)
 
     except(KeyboardInterrupt, EOFError, SystemExit):
