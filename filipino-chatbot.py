@@ -7,8 +7,7 @@ chatbot = ChatBot('Kaisa',
 
 trainer = ChatterBotCorpusTrainer(chatbot)
 trainer.train("./filipino-random-conversations.yml")
-trainer.train("./filipino-games.yml")
-
+# trainer.train("./filipino-games.yml") Unfinished
 while True:
     try:
         print("User: ")
